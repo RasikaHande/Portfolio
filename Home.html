@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - RASIKA HANDE </title>
+  <link rel="stylesheet" href="Home.css" />
+  <link rel="stylesheet" href="Navbar.css">
+
+  
+</head>
+<body>
+<header id="navbar"></header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h4>Full Stack Developer</h4>
+      <h1>Hi, I'm <span>Rasika</span></h1>
+      <h2>From India</h2>
+    </div>
+    <div class="hero-img">
+      <img src="./MyProfile.jpg" alt="Rasika's profile">
+    </div>
+  </section>
+  
+<script>
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const currentPage = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

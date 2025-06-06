@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="Resume.css">
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+  <header id="navbar"></header>
+    <!-- Resume Section -->
+<section class="resume" id="resume">
+  <h2>Resume</h2>
+
+  <div class="resume-container">
+
+    <p class="resume-text">
+      You can view and download my resume below to learn more about my academic background, skills, and projects.
+    </p>
+
+    <a href="RasikaHande_Resume.pdf" download class="resume-btn">Download Resume</a>
+
+    <!-- Optional Timeline for experience or education -->
+    <div class="resume-timeline">
+      <div class="resume-item">
+        <h3>BCA (2022 - 2025)</h3>
+        <p>Kamla Nehru College, Sakkardara, Nagpur – RTMNU University</p>
+      </div>
+      <!-- Add more items if needed -->
+    </div>
+
+  </div>
+</section>
+<script>
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const currentPage = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

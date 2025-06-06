@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+   <header id="navbar"></header>
+    <!-- About Me Section -->
+<section class="about" id="about">
+  <div class="about-container">
+    <div class="about-img">
+      <img src="MyProfile.jpg" alt="Rasika Hande">
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+            I’m a passionate and growth-oriented Full Stack Developer with a strong foundation in both frontend and backend technologies.
+           <br>I have completed my Bachelor of Computer Applications (BCA) in 2025 with First Division from Kamla Nehru College, Sakkardara, Nagpur under RTMNU University. 
+           <br> My frontend expertise includes HTML, CSS, JavaScript, and React.js, while I also work confidently on the backend using Node.js and Express.js. 
+           <br>I’m experienced with MongoDB for database management. Known for being a quick learner and highly adaptable, 
+           <br>I continuously strive to expand my skill set and contribute meaningfully to dynamic and challenging tech environments.
+      </p>
+
+      <div class="tab-titles">
+        <p class="tab-links active-link">Education</p>
+      </div>
+      <div class="tab-contents active-tab">
+        <ul>
+          <li><span>BCA (2022 – 2025)</span><br>Kamla Nehru College, Sakkardara, Nagpur – RTMNU University <br>First Division | 71.74 %</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const currentPage = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

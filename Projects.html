@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="Projects.css">
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+  <header id="navbar"></header>
+    <!-- Projects Section -->
+<section class="projects" id="projects">
+  <h2 class="heading">My <span>Projects</span></h2>
+
+  <div class="project-container">
+  
+    <div class="project-card">
+      
+      <h3>Quiz App</h3>
+      <p>A responsive quiz application built using HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/QuizApp" target="_blank">GitHub</a>
+        <a href="https://quizapp-q2.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      
+      <h3>Survey Form</h3>
+      <p>A responsive quiz application built using HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/SurveyForm" target="_blank">GitHub</a>
+        <a href="https://usersurvey-form.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      
+      <h3>Stopwatch</h3>
+      <p>A responsive quiz application built using HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/StopWatch" target="_blank">GitHub</a>
+        <a href="https://stopwatch-s.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      
+      <h3>Kanban Board</h3>
+      <p>A responsive quiz application built using HTML, CSS, JavaScript and React.js.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/Kanban_Board" target="_blank">GitHub</a>
+        <a href="https://kanbanboard-kb.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      
+      <h3>Weather Application</h3>
+      <p>A responsive quiz application built using HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/Weather-Application" target="_blank">GitHub</a>
+        <a href="https://weatherapp-wa2.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+     
+      <h3>conference Website</h3>
+      <p>A responsive quiz application built using HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://github.com/RasikaHande/Conference_Website" target="_blank">GitHub</a>
+        <a href="https://conferencewebsite-24.netlify.app/" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+<script>
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const currentPage = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

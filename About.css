@@ -1,0 +1,109 @@
+
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f;
+  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+
+/* About Section */
+.about {
+  min-height: 100vh; /* Full screen height */
+  padding: 4rem 2rem;
+  background-color: #1e1e2f;
+  color: #f1f1f1; /* Just to be safe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-img img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* About Content */
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Tab Styling */
+.tab-titles {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tab-links {
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tab-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background: #ff004f;
+  transition: 0.3s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.tab-contents ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-contents ul li {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.tab-contents ul li span {
+  color: #ff004f;
+  font-weight: 600;
+}

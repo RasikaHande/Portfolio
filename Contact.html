@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="Contact.css" />
+  <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <div class="container">
+    <h1>Contact Me</h1>
+
+    <div class="contact-info">
+      <a href="mailto:rasikahande02@gmail.com">Email</a>
+      <a href="https://github.com/rasikahande" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/rasika-hande" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      
+
+    </div>
+
+    <a href="RasikaHande_Resume.pdf" download class="btn">Download Resume</a>
+
+    <form class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Submit</button>
+</form>
+
+  </div>
+  <script>
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        const currentPage = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-links a").forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message!');
+    this.reset();
+  });
+
+
+  </script>
+</body>
+</html>

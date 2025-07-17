@@ -1,0 +1,68 @@
+/* src/pages/Contact.css */
+
+.contact-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.contact-container p {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0097a7;
+}

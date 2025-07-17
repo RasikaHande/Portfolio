@@ -1,0 +1,83 @@
+.projects-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.projects-container:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #00ffff;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+p {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.project-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+  font-weight: 500;
+  color: #fff;
+  cursor: default;
+  width: 250px;
+  text-align: center;
+}
+
+.project-list li:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+.project-links {
+  margin-top: 8px;
+}
+
+.project-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 5px;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
